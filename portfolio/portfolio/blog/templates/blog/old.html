@@ -1,0 +1,182 @@
+{% load static %}
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+
+
+
+
+
+    <title>welcome</title>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg" class="text-center" id="navbar-example2" style="background-color:#87cefa">
+    <a class="navbar-brand" href="#">
+
+
+        <img alt="Example" height="30" src="{% static 'blog/images/nature.jpg' %}" width="50">
+
+    </a>
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler"
+            data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}"><b><i>About</i></b><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'blogs' %}"><b><i>Blogs</i></b></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}"><b><i>Contacts</i></b></a>
+            </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-right:10px">Search</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> <a href="{% url 'login' %}">login</a></button>
+
+        </form>
+    </div>
+</nav>
+
+<div class="container-fluid" >
+
+    <div class="text-center">
+
+        <img class="mySlides" src="{% static 'blog/images/shop.jpeg' %}" style="width:200%">
+        <img class="mySlides" src="{% static 'blog/images/dress1.jpg' %}" style="width:100%">
+        <img class="mySlides" src="{% static 'blog/images/shop2.jpg' %}"  style="width:100%">
+        <img class="mySlides" src="{% static 'blog/images/dress2.jpg' %}" style="width:100%">
+    </div>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "inline";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+    <div class="footer-container-wrapper">
+        <div class="footer-container container-fluid">
+
+            <div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+                <div class="row-fluid ">
+                    <div class="span12 widget-span widget-type-global_group " style="" data-widget-type="global_group" data-x="0" data-w="12">
+                        <!-- start coded_template: id:4428359317 path:generated_global_groups/4428359302.html -->
+<div class="" data-global-widget-path="generated_global_groups/4428359302.html"><div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_html " style="" data-widget-type="raw_html" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_147674200098349839" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><footer id="hsg-footer--lp" class="hsg-footer">
+<div class="hsg-footer__layout">
+<section class="hsg-footer__copyright">
+<p>Copyright © 2019 HubSpot, Inc.</p>
+<ul class="inline unstyled">
+<li><a href="https://legal.hubspot.com/legal-stuff">Legal Stuff</a></li>
+<li><a href="https://legal.hubspot.com/privacy-policy">Privacy Policy</a></li>
+</ul>
+</section>
+</div>
+</footer></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+</div><!-- end coded_template: id:4428359317 path:generated_global_groups/4428359302.html -->
+
+                    </div>
+                    <!--end widget-span -->
+                </div>
+                <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+
+            <div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+                <div class="row-fluid ">
+                    <div class="span12 widget-span widget-type-raw_jinja " style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+                        <!-- <script type="text/javascript">
+                            var intervalID = window.setInterval(clickToChatButtonText, 1000);
+
+                            function clickToChatButtonText() {
+                                var messagesIframe = document.getElementById('hubspot-messages-iframe-container');
+                                if (document.contains(messagesIframe)) {
+                                    var clickToChatCTA = document.getElementById('click-to-chat__cta--text');
+                                    var parseHeight = messagesIframe.style.height;
+                                    if (parseInt(parseHeight, 10) < 180) {
+                                        console.log("this div is short");
+                                        setTimeout(() => {
+                                          this.clickToChatButtonText(5);
+                                        }, 1000);
+                                        clickToChatCTA.innerHTML = 'Leave Sales a message';
+                                    } else {
+                                        console.log("this div is tall");
+                                        clickToChatCTA.innerHTML = 'Chat with Sales';
+                                    }
+                                    window.clearInterval(intervalID);
+                                } else {
+                                    return false;
+                                }
+                            }
+                        </script> -->
+                    </div>
+                    <!--end widget-span -->
+
+                </div>
+                <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+
+        </div>
+        <!--end footer -->
+    </div>
+    <!--end footer wrapper -->
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script crossorigin="anonymous"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+{% block code %}
+
+{% endblock code %}
+
+</html>
